@@ -9,6 +9,8 @@ Blog update 1 - 31/03/2025 - Week 6
 
 Blog update 1 - 24/04/2025 - Week 7
 
+Part 1
+
 1. Feature Engineering and Initial Exploration
 The analysis began with the selection and visualization of five engineered features. Using MATLAB, basic exploratory techniques such as boxplots and scatter plots were employed to gain an initial understanding of data distributions and the relationships between predictors and the target variable.
 
@@ -41,3 +43,54 @@ Refinement of feature selection to eliminate noisy or redundant predictors.
 Exploration of more sophisticated models, including deep learning architectures and ensemble methods.
 
 Enhanced model validation through cross-validation and hyperparameter tuning.
+
+Part 2 
+
+GlucoData Analysis and Predictive Modeling
+This project presents a systematic approach to analyzing data obtained from a glucometer prototype. The dataset includes measurements and lifestyle information from 461 patients, compiled to support predictive modeling for glucose levels.
+
+1. Dataset Overview
+The initial dataset comprises 21 features, including demographic and physiological variables such as:
+•	Age
+•	Gender
+•	Height (cm)
+•	Weight (kg)
+•	Body Mass Index (BMI)
+•	Heart Rate (bpm)
+•	Blood Glucose Level (mmol/L)
+These features were extracted from the raw data to construct a refined 6-feature dataset focused on lifestyle and health indicators relevant to glucose levels.
+
+3. Data Preprocessing
+To enhance data quality and model performance, the following preprocessing steps were applied:
+•	Removal of missing values and outliers, resulting in a reduced dataset of 318 valid entries.
+•	Normalization using Z-score transformation, which standardizes features to have a mean of 0 and a standard deviation of 1.
+Data visualization techniques, including box plots and scatter plots, were used to assess the distribution and detect anomalies in both raw and normalized datasets.
+
+4. Dimensionality Reduction
+To reduce data complexity while preserving critical information:
+•	Principal Component Analysis (PCA) was performed, reducing the dataset from 6 to 4 dimensions.
+•	Visual tools such as Pareto charts and biplots provided insights into the relationships between features.
+•	Curvilinear Component Analysis (CCA) was also employed for further dimensionality reduction and visualization, highlighting potential clusters and outliers.
+
+5. Correlation Analysis
+A correlation matrix heatmap of the normalized data was used to identify redundancy and interdependencies among features. Notably, BMI and weight exhibited a strong correlation, indicating potential for feature reduction in future modeling efforts.
+
+6. Machine Learning and Model Evaluation
+The Regression Learner App in MATLAB was utilized to train and evaluate various regression models:
+•	The Ensemble Regression model yielded the best performance, though with modest results:
+o	Training R² = 0.06
+o	Testing R² = 0.12
+Despite limited predictive accuracy, the model serves as a foundational benchmark for future improvements.
+
+7. Performance Visualization
+•	Predicted vs. actual plots revealed significant variance, indicating low predictive precision.
+•	A response plot illustrated substantial prediction errors, likely due to non-linear relationships and weak feature-response correlations.
+
+Future Work
+To improve the predictive performance of the model, future efforts will focus on:
+•	Advanced feature engineering
+•	Hyperparameter optimization
+•	Implementation of non-linear and deep learning models
+•	Expansion of the dataset, if possible, to enhance training efficacy
+
+
