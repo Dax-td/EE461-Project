@@ -94,3 +94,13 @@ To improve the predictive performance of the model, future efforts will focus on
 •	Expansion of the dataset, if possible, to enhance training efficacy
 
 
+Week 9 - 28/03/202 
+
+Used Feature Diagnotic Designer to calculate, Rank and extract the best features
+Applied feature extraction to all quick to train models in order compare performance increase
+- highest model found was R^2 value of 0.14, 14% increase from Previous Neurla Network Model
+- implemented using voltage sensor data
+
+Attempted to design and implement ANN
+- model accuracy was found to be 55% on both validation and test data.
+- this model was implemented using the lifestyle data, showing promise for model development
