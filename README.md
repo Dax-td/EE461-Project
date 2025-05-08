@@ -94,7 +94,7 @@ To improve the predictive performance of the model, future efforts will focus on
 •	Expansion of the dataset, if possible, to enhance training efficacy
 
 
-Week 9 - 28/03/202 
+Week 9 & Week 10- 28/03/2025 to 08/05/2025
 
 Used Feature Diagnotic Designer to calculate, Rank and extract the best features
 Applied feature extraction to all quick to train models in order compare performance increase
@@ -104,3 +104,62 @@ Applied feature extraction to all quick to train models in order compare perform
 Attempted to design and implement ANN
 - model accuracy was found to be 55% on both validation and test data.
 - this model was implemented using the lifestyle data, showing promise for model development
+
+Advancing Non-Invasive Blood Glucose Prediction Through AI: A Progress Report
+As diabetes rates continue to rise globally, so does the urgency for less intrusive blood glucose monitoring systems. Our project takes on this challenge by harnessing artificial intelligence (AI) to estimate glucose levels non-invasively using sensor and lifestyle data—no needles, no strips.
+
+In this second progress report, we delve into our latest findings, comparing the performance of various machine learning and deep learning models to uncover the best path forward for real-time, AI-powered glucose prediction.
+
+🔍 Project Goal: Smarter, Simpler Glucose Monitoring
+Our aim in this phase was clear: evaluate and compare the performance of Artificial Neural Networks (ANN), Long Short-Term Memory (LSTM) networks, and Curvilinear Component Analysis (CCA)-based regression models.
+
+We tested each approach across three input configurations:
+Voltage-only sensor data
+Lifestyle data (e.g., diet, activity, sleep)
+
+A combined dataset of both
+Ultimately, we're working toward identifying the most accurate yet computationally lightweight model suitable for integration into a portable, real-time glucometer system.
+
+🛠️ Methodology in a Nutshell
+Preprocessing: We cleaned the data by handling missing values, removing outliers, and applying z-score normalization.
+Dataset Split: 70% training, 15% validation, and 15% testing.
+Model Training: MATLAB was used for model development and evaluation.
+
+🤖 AI Models in Focus
+🔹 Artificial Neural Networks (ANN)
+Structure: Two hidden layers, with neurons scaled to match input complexity.
+Strength: Good at capturing non-linear patterns.
+
+Results:
+Voltage Data: R² = 0.53 – decent correlation with true glucose levels.
+Lifestyle Data: R² = 0.07 – poor performance; lifestyle alone doesn't cut it.
+Combined Data: R² = 0.5 – only a slight boost, indicating potential noise from lifestyle variables.
+
+🔸 Long Short-Term Memory Networks (LSTM)
+Structure: Memory cells and gates to model time-dependent patterns.
+
+Results:
+Voltage Data: RMSE = 0.16, R² ≈ 0.70 – outperforms ANN thanks to temporal pattern recognition.
+Lifestyle Data: R² ≈ 0.36 – again underwhelming, but better than ANN.
+Combined Data: R² ≈ 0.83 – best deep learning outcome; LSTM effectively integrates diverse inputs.
+
+⚙️ CCA-Based Regression Models
+Approach: Reduced 20 features to 9 using CCA, then applied regression.
+
+Results:
+Linear Regression: R² = 0.99 (validation), R² = 1 (test) with RMSE <2% of the response range.
+These results highlight both efficiency and high accuracy, making CCA-based models highly attractive for embedded systems.
+
+📊 Key Takeaways
+LSTM models shine in capturing complex, time-dependent glucose trends—especially with combined inputs.
+ANNs underperform when lifestyle data is used alone or even in combination.
+CCA-based linear regression delivers outstanding accuracy with minimal computational overhead, making it the front-runner for real-time deployment.
+
+🔮 What's Next?
+Our next steps will focus on:
+
+Hyperparameter tuning
+Exploring ensemble models
+Conducting Clarke’s Error Grid analysis to assess clinical relevance
+Embedding the best-performing model into a hardware prototype for real-time testing
+We’re getting closer to an accessible, non-invasive glucose monitoring solution powered by intelligent data modeling—and we’re excited to keep pushing forward.
